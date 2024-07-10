@@ -5,6 +5,7 @@ import IconButton from 'material-ui/IconButton';
 import ActionZoomIn from 'material-ui/svg-icons/action/zoom-in';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
+import ZoomIn from 'material-ui/svg-icons/action/zoom-in';
 
 
 export default class ImageResults extends Component {
