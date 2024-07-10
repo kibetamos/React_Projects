@@ -16,6 +16,7 @@ export default class Search extends Component {
         apiKey:'44867923-0dfc83b31bfc371dd7af6d462',
         images: []
     }
+    
     onTextChange = e => {
         const val = e.target.value;
         this.setState({ [e.target.name]: val }, () => {
@@ -33,7 +34,9 @@ export default class Search extends Component {
           }
         });
       };
+    
       onAmountChange = (e, index, value) => this.setState({ amount: value });
+    
   render() {
     console.log(this.state.images)
     return (

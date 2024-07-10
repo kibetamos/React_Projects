@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { GridList, GridTile } from 'material-ui/GridList';
 import IconButton from 'material-ui/IconButton';
 import ActionZoomIn from 'material-ui/svg-icons/action/zoom-in';
@@ -51,5 +51,5 @@ export default class ImageResults extends Component {
   }
 
   ImageResults.propTypes = {
-    images: propTypes.array.isRequired
+    images: PropTypes.array.isRequired
   };
