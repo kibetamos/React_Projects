@@ -4,6 +4,8 @@ import { SelectField } from 'material-ui'
 import { ActionPictureInPicture } from 'material-ui/svg-icons'
 import MenuItem from 'material-ui/MenuItem'
 import axios from 'axios';
+import ImageResults from '../image-results/ImageResults'
+
 
 export default class Search extends Component {
 
@@ -22,7 +24,9 @@ export default class Search extends Component {
             .catch(err => console.log(err) )
         });
 
-    }
+    };
+
+    onAmountChange = (e,index, value)=> this.setState({ amount:value })
   render() {
     console.log(this.state.images)
     return (
@@ -36,7 +40,7 @@ export default class Search extends Component {
         />
 
         <br />
-        
+
         <SelectField
           name="amount"
           floatingLabelText="Amount"
@@ -51,7 +55,7 @@ export default class Search extends Component {
         </SelectField>
         <br />
 
-
+        {this.state.images.length > 0 ? (<ImageResults images={this.state.images}/> ): 'No Images found'}
       </div>
     )
   }
